@@ -1,0 +1,12 @@
+name = "gemini-web2api"
+main = "worker.js"
+compatibility_date = "2024-11-06"
+
+# API_KEYS is stored as an ENCRYPTED Cloudflare secret (not committed here).
+# Set/rotate it with:
+#   printf '["sk-your-private-key"]' | wrangler secret put API_KEYS
+# The worker reads env.API_KEYS (JSON array) and rejects any other key with 401.
+
+# Other optional plaintext vars can go here:
+# [vars]
+# DEFAULT_MODEL = "gemini-3.6-flash"
